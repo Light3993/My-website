@@ -1,0 +1,88 @@
+/* Animations */
+
+/* Animation de scan */
+@keyframes scan {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+/* Animation de flottement */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Animation de pulsation */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Classes d'animation */
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+.pulsing {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Ligne de scan */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary);
+    box-shadow: var(--glow-primary);
+    animation: scan 2s linear infinite;
+}
+
+/* Effets au survol */
+.input-group input:focus ~ .input-line,
+.input-group select:focus ~ .input-line {
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: var(--primary);
+    color: var(--bg-primary);
+    box-shadow: var(--glow-primary);
+}
+
+/* Animation de la notification */
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.hide {
+    transform: translateX(150%);
+}
+
+/* Animation des particules */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(0, 243, 255, 0.1),
+        transparent 50%
+    );
+    transition: all 0.3s ease;
+}

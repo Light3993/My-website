@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPL - Inscription Étudiante</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+    <!-- Police futuriste -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Effet de particules en arrière-plan -->
+    <div class="particles"></div>
+
+    <!-- Conteneur principal -->
+    <div class="container">
+        <!-- En-tête avec effet holographique -->
+        <header class="header">
+            <div class="logo-container">
+                <!-- Espace réservé pour le logo gauche -->
+                <div class="logo logo-left">
+                    <img src="https://media.licdn.com/dms/image/C4E0BAQFvQxT6RrCAuw/company-logo_200_200/0/1678781271799/cole_polytechnique_de_lom_ul_logo?e=2147483647&v=beta&t=k34jtQ3j3yEjx8moo3BhFxLyD_OjgnpkUtQbxIgM7lc" alt="Logo 1">
+
+                </div>
+            </div>
+
+            <div class="title-container">
+                <h1 class="main-title">Enregistrement EPL </h1>
+                <div class="title-decoration"></div>
+                <p class="subtitle">Portail d'enregistrement Étudiant</p>
+            </div>
+
+            <div class="logo-container">
+                <!-- Espace réservé pour le logo droit -->
+                <div class="logo logo-right">
+                    <img src="https://th.bing.com/th/id/R.2b5f2a454d72746db61f581f3a9f0e06?rik=hdzcK33CJzbV1w&pid=ImgRaw&r=0" alt="Logo 2">
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Formulaire principal -->
+        <main class="main-content">
+            <div class="form-container">
+                <form id="registrationForm" class="registration-form">
+                    <!-- Section photo -->
+                    <div class="photo-section">
+                        <div class="photo-preview-container">
+                            <div class="photo-frame">
+                                <img id="photoPreview" src="assets/placeholder.png" alt="Photo">
+                                <div class="scan-line"></div>
+                            </div>
+                        </div>
+                        <label for="photo" class="photo-upload-btn">
+                            <span>Sélectionner une photo</span>
+                            <input type="file" id="photo" accept="image/*" class="hidden">
+                        </label>
+                    </div>
+
+                    <!-- Grille de formulaire -->
+                    <div class="form-grid">
+                        <!-- Informations personnelles -->
+                        <div class="input-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="prenoms">Prénoms</label>
+                            <input type="text" id="prenoms" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="dateNaissance">Date de Naissance</label>
+                            <input type="date" id="dateNaissance" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="sexe">Sexe</label>
+                            <select id="sexe" required>
+                                <option value="">Sélectionner</option>
+                                <option value="M">Masculin</option>
+                                <option value="F">Féminin</option>
+                            </select>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="adresse">Adresse</label>
+                            <input type="text" id="adresse" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="telephone">Téléphone</label>
+                            <input type="tel" id="telephone" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="filiere">Filière</label>
+                            <select id="filiere" required>
+                                <option value="">Sélectionner une filière</option>
+                                <option value="logistique">Logistique & Transport</option>
+                                <option value="ia">Intelligence Artificielle et Big Data</option>
+                                <option value="informatique">Informatique et Système</option>
+                                <option value="mecanique">LF Génie Mécanique</option>
+                                <option value="civil">LF Génie Civil</option>
+                                <option value="electrique">LF Génie Électrique</option>
+                            </select>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="semestre">Semestre</label>
+                            <select id="semestre" required>
+                                <option value="">Sélectionner un semestre</option>
+                                <option value="1">Semestre 1</option>
+                                <option value="2">Semestre 2</option>
+                            </select>
+                            <div class="input-line"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Valider l'enregistrement</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification système -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Scripts -->
+    <script src="validation.js"></script>
+    <script src="photo-handler.js"></script>
+    <script src="effects.js"></script>
+    <script src="notifications.js"></script>
+</body>
+</html>

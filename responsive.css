@@ -1,0 +1,67 @@
+/* Responsive Design */
+
+/* Tablettes et petits écrans */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+
+    .logo-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Mobiles */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: var(--spacing-sm);
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .photo-preview-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .input-group input,
+    .input-group select {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .notification {
+        left: var(--spacing-md);
+        right: var(--spacing-md);
+        text-align: center;
+    }
+}
+
+/* Ajustements pour les appareils tactiles */
+@media (hover: none) {
+    .input-group input:hover,
+    .input-group select:hover,
+    .submit-btn:hover {
+        transform: none;
+    }
+}

@@ -1,0 +1,88 @@
+.dashboard {
+    min-height: 100vh;
+    padding: var(--spacing-lg);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Section Annonces */
+.announcements-section {
+    background: rgba(16, 16, 32, 0.4);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+}
+
+.announcement-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-left: 4px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.announcement-card:hover {
+    transform: translateX(10px);
+}
+
+/* Section Vidéos */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.video-card {
+    background: rgba(16, 16, 32, 0.6);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Section Cours */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+}
+
+.course-card {
+    background: rgba(16, 16, 32, 0.6);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.course-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--primary);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+}
+
+.section-title {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+    text-shadow: var(--glow-primary);
+}

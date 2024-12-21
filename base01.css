@@ -1,0 +1,43 @@
+:root {
+    /* Couleurs principales */
+    --primary: #00f3ff;
+    --secondary: #ff00ea;
+    --accent: #00ff88;
+    
+    /* Couleurs de fond */
+    --bg-primary: #0a0a1f;
+    --bg-secondary: rgba(16, 16, 32, 0.8);
+    
+    /* Couleurs de texte */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    
+    /* Effets */
+    --glow-primary: 0 0 10px var(--primary),
+                    0 0 20px var(--primary),
+                    0 0 30px var(--primary);
+    
+    /* Dimensions */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --border-radius: 8px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    background-image: url('https://u-static.haozhaopian.net/uid_8f8a7cd8cd654e5aae79779ac924cba6/aiImage/df54dbf76be04ca4a743f72a65631309.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hidden {
+    display: none !important;
+}

@@ -1,0 +1,77 @@
+/* Variables globales */
+:root {
+    /* Couleurs principales */
+    --primary: #00f3ff;
+    --secondary: #ff00ea;
+    --accent: #00ff88;
+    
+    /* Couleurs de fond */
+    --bg-primary: #0a0a1f;
+    --bg-secondary: rgba(16, 16, 32, 0.8);
+    
+    /* Couleurs de texte */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    
+    /* Effets */
+    --glow-primary: 0 0 10px var(--primary),
+                    0 0 20px var(--primary),
+                    0 0 30px var(--primary);
+    --glow-secondary: 0 0 10px var(--secondary),
+                      0 0 20px var(--secondary);
+    
+    /* Dimensions */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --border-radius: 8px;
+}
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Espace réservé pour l'image de fond */
+    background-image: url('fotor-ai-2024121819532.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.logo-container img {
+    width: 150px;
+    height: auto;
+}
+
+/* Styles de base des éléments */
+input, select, button {
+    font-family: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Masquer les éléments */
+.hidden {
+    display: none;
+}

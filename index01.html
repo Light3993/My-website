@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPL - Portail Étudiant</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="base01.css">
+    <link rel="stylesheet" href="auth01.css">
+    <link rel="stylesheet" href="dashboard01.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+    <!-- Police futuriste -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Effet de particules en arrière-plan -->
+    <div class="particles"></div>
+
+    <!-- Section d'authentification -->
+    <div id="authSection" class="auth-section">
+        <div class="auth-container">
+            <h2 class="cyber-title">Accès Étudiant</h2>
+            <div class="cyber-line"></div>
+            <form id="authForm" class="auth-form">
+                <div class="input-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" required>
+                    <div class="input-line"></div>
+                </div>
+                <div class="input-group">
+                    <label for="prenoms">Prénoms</label>
+                    <input type="text" id="prenoms" required>
+                    <div class="input-line"></div>
+                </div>
+                <button type="submit" class="cyber-button">
+                    <span>Connexion</span>
+                    <div class="button-glow"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard (initialement caché) -->
+    <div id="dashboard" class="dashboard hidden">
+        <!-- En-tête -->
+        <header class="dashboard-header">
+            <div class="logo-container">Logo EPL</div>
+            <h1 class="portal-title">Portail Étudiant EPL</h1>
+            <div class="user-info">
+                <span id="userName"></span>
+                <button onclick="logout()" class="logout-btn">Déconnexion</button>
+            </div>
+        </header>
+
+        <!-- Section Annonces -->
+        <section class="announcements-section">
+            <h2 class="section-title">Annonces Importantes</h2>
+            <div class="announcements-container" id="announcements">
+                <!-- Les annonces seront ajoutées dynamiquement ici -->
+            </div>
+        </section>
+
+        <!-- Section Vidéos -->
+        <section class="videos-section">
+            <h2 class="section-title">Actualités Scientifiques</h2>
+            <div class="video-grid" id="videoGrid">
+                <!-- Les vidéos seront ajoutées dynamiquement ici -->
+            </div>
+        </section>
+
+        <!-- Section Cours -->
+        <section class="courses-section">
+            <h2 class="section-title">Mes Cours</h2>
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Les cours seront ajoutés dynamiquement ici -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="auth01.js"></script>
+    <script src="dashboard01.js"></script>
+    <script src="announcements01.js"></script>
+    <script src="courses01.js"></script>
+    <script src="videos01.js"></script>
+    <script src="effects01.js"></script>
+</body>
+</html>

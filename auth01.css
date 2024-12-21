@@ -1,0 +1,46 @@
+.auth-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+.auth-container {
+    background: rgba(16, 16, 32, 0.4);
+    backdrop-filter: blur(20px);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.cyber-title {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--primary);
+    text-shadow: var(--glow-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.cyber-button {
+    width: 100%;
+    padding: var(--spacing-md);
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: var(--border-radius);
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cyber-button:hover {
+    background: var(--primary);
+    color: var(--bg-primary);
+    box-shadow: var(--glow-primary);
+}
