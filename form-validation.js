@@ -121,53 +121,42 @@ function showSummary() {
     document.body.appendChild(modal);
     setTimeout(() => modal.style.display = 'block', 10);
 }
-
-function confirmSubmission(modal) {
+// Mise à jour de la fonction confirmSubmission
+async function confirmSubmission(modal) {
     // Récupération des données du formulaire
     const formData = {
         nom: document.getElementById('nom').value,
-        prenoms: document.getElementById('prenoms').value
+        prenoms: document.getElementById('prenoms').value,
+        dateNaissance: document.getElementById('dateNaissance').value,
+        sexe: document.getElementById('sexe').value,
+        adresse: document.getElementById('adresse').value,
+        email: document.getElementById('email').value,
+        telephone: document.getElementById('telephone').value,
+        filiere: document.getElementById('filiere').value,
+        semestre: document.getElementById('semestre').value,
+        photoUrl: null // À implémenter avec le stockage des fichiers
     };
 
-    // Stockage des informations d'inscription
-    localStorage.setItem('registeredUser', JSON.stringify(formData));
+    // Enregistrement dans la base de données
+    const result = await registerStudent(formData);
+    
+    if (result.success) {
+        // Stockage des informations d'inscription pour le portail
+        localStorage.setItem('registeredUser', JSON.stringify({
+            nom: formData.nom,
+            prenoms: formData.prenoms
+        }));
 
-    // Fermeture du modal
-    closeModal(modal);
+        // Fermeture du modal
+        closeModal(modal);
 
-    // Affichage du message de succès
-    showNotification('Enregistrement réussie !', 'success');
+        // Affichage du message de succès
+        showNotification('Inscription réussie !', 'success');
 
-    // Redirection vers le portail après 2 secondes
-    setTimeout(() => {
-        window.location.href = 'index01.html';
-    }, 2000);
-}
-
-function closeModal(modal) {
-    modal.style.display = 'none';
-    setTimeout(() => modal.remove(), 300);
-}
-
-function formatLabel(key) {
-    const labels = {
-        nom: 'Nom',
-        prenoms: 'Prénoms',
-        dateNaissance: 'Date de naissance',
-        sexe: 'Sexe',
-        adresse: 'Adresse',
-        email: 'Email',
-        telephone: 'Téléphone',
-        filiere: 'Filière',
-        semestre: 'Semestre'
-    };
-    return labels[key] || key;
-}
-
-function formatDate(date) {
-    return new Date(date).toLocaleDateString('fr-FR', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
-}
+        // Redirection vers le portail après 2 secondes
+        setTimeout(() => {
+            window.location.href = 'index01.html';
+        }, 2000);
+    } else {
+        showNotification('Erreur lors de l\'inscription. Veuillez réessayer.', 'error');
+    }
