@@ -2,7 +2,7 @@
 const { createClient } = supabase;
 
 // Configuration de la connexion à Supabase avec les variables d'environnement
-const supabaseUrl = 'https://bxbrmnicsypdydhxgirw.supabase.co';
+const supabaseUrl = 'https://yreyvbqguezsllqiezxe.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlyZXl2YnFndWV6c2xscWllenhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQ4NTMzNDIsImV4cCI6MjA1MDQyOTM0Mn0.kkL2NaCkHbZCBRP1C0leuuEwBEPjMWlPX9u_gE2rSC8';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
