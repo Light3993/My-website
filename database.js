@@ -7,7 +7,9 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Fonction pour enregistrer un nouvel étudiant
+
 async function saveStudentData(formData) {
+     console.log('Données envoyées:', data); // Ajoutez ceci
     try {
         const { data, error } = await supabase
             .from('students')
