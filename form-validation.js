@@ -155,7 +155,7 @@ async function confirmSubmission(modal) {
 
         // Redirection vers le portail après 2 secondes
         setTimeout(() => {
-            window.location.href = 'index01.html';
+            window.location.href = 'https://light3993.github.io/index01/';
         }, 2000);
     } else {
         showNotification('Erreur lors de l\'inscription. Veuillez réessayer.', 'error');
